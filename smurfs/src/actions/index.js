@@ -25,7 +25,6 @@ export const REQUEST_ERROR = "REQUEST_ERROR";
 
 
 export const getSmurfs = () => dispatch => {
-  //dispatch({ type: GET_SMURFS, payload: localStorage.getItem('token')})
   axios
   .get('http://localhost:3333/smurfs')
   .then(res => {

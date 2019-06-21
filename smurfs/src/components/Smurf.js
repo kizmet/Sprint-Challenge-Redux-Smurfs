@@ -3,7 +3,7 @@ import { Card } from 'semantic-ui-react';
 
 const Smurf = props => {
   return (
-    <Card>
+    <Card style={{background:'#2185d04f'}}>
     <Card.Content>
       <Card.Header>{props.smurf.name}</Card.Header>
       <Card.Meta>{props.smurf.height} tall</Card.Meta>

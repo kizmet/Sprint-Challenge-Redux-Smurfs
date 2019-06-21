@@ -88,8 +88,6 @@ class SmurfForm extends Component {
                         </Form.Field>
                         <Form.Field >
                         <button
-                            //onClick={this.addSmurf}
-                            //control={Button}
                             className="addSmurf"
                             type="submit"
                         >
