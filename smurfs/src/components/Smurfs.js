@@ -14,36 +14,11 @@ import {
 } from "semantic-ui-react";
 
 class Smurfs extends React.Component {
-    state = {
-        name: "",
-        age: "",
-        height: ""
-    };
+ 
     componentDidMount() {
         this.props.getSmurfs();
     }
 
-    handleChanges = e => {
-    e.persist();
-    let value = e.target.value;
-    if (e.target.name === 'age') { value = parseInt(value,10)}
-    this.setState({ [e.target.name]: value });
-    };
-
-    addSmurf = e => {
-        e.preventDefault();
-        this.props.saveSmurf({
-            name: this.state.name,
-            age: this.state.age,
-            height: this.state.height
-        });
-
-        this.setState({
-            name: "",
-            age: "",
-            height: ""
-        });
-    };
 
     render() {
         return (
@@ -61,41 +36,7 @@ class Smurfs extends React.Component {
                     {this.props.smurfs.map(smurf => (
                         <Smurf key={smurf.id} smurf={smurf} />
                     ))}
-                </Card.Group>
-                
-                    {/*<Form onSubmit={this.addSmurf}>*/}
-                        <input
-                            //control={Input}
-                            label="Name"
-                            onChange={this.handleChanges}
-                            placeholder="name"
-                            value={this.state.name}
-                            name="name"
-                        />
-                        <input
-                            //control={Input}
-                            label="Age"
-                            onChange={this.handleChanges}
-                            placeholder="age"
-                            value={this.state.age}
-                            name="age"
-                        />
-                        <input
-                            //control={Input}
-                            label="Height"
-                            onChange={this.handleChanges}
-                            placeholder="height"
-                            value={this.state.height}
-                            name="height"
-                        />
-                        <button
-                        onClick={this.addSmurf}
-                        //control={Button} 
-                        type="submit">
-                            Add to the village
-                        </button>
-                    {/*</Form>*/}
-                
+                </Card.Group> 
             </Container>
         );
     }

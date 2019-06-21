@@ -22,11 +22,11 @@ class Navigation extends React.Component {
                   onClick={this.handleItemClick}
                   href='/'
                    >Home</Menu.Item>   
-                   <Menu.Item
+                   <Menu.Item as={Link} to="/smurf-form"
                    name="add-a-smurf"     
                    active={this.activeItem==='add-a-smurf'}
                    onClick={this.handleItemClick}
-                   href="/smurf-form"
+                   
                    >Add a Smurf 
                    </Menu.Item>
               </Menu>

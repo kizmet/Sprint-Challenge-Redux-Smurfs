@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Button, Form, Container, Header, Select,Input } from 'semantic-ui-react';
-
-
+import { saveSmurf } from "../actions";
+import { connect } from "react-redux";
 
 class SmurfForm extends Component {
   constructor(props) {
     super(props);
-    }
-    
+    }  
     state = {
       name: '',
       age: '',
@@ -76,5 +75,6 @@ class SmurfForm extends Component {
     );
   }
 }
+export default connect(null, { saveSmurf })(SmurfForm)
 
-export default SmurfForm;
+//export default SmurfForm;

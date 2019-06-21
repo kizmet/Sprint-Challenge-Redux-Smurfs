@@ -17,7 +17,8 @@ class App extends React.Component {
       <Container style={{ margin: 0 }} className="smurfs">
         <Router>
           <Navigation />
-          <Route path="/" component={Smurfs} />
+          <Route exact path="/" component={Smurfs} />
+          <Route path="/smurf-form" component={SmurfForm} />
 
 
         </Router>
