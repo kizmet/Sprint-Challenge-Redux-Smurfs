@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Menu, Header, Container } from "semantic-ui-react";
-import Navigation from './Navigation';
-import SmurfForm from './SmurfForm';
-import Smurfs from './Smurfs';
+import Navigation from "./Navigation";
+import SmurfForm from "./SmurfForm";
+import Smurfs from "./Smurfs";
 import "./App.css";
 /*
  to wire this component up you're going to need a few things.
@@ -14,24 +14,16 @@ import "./App.css";
 class App extends React.Component {
   render() {
     return (
-      <Container style={{margin:0}} className="smurfs">
-      <Router>
-        <div className="App">
+      <Container style={{ margin: 0 }} className="smurfs">
+        <Router>
           <Navigation />
-          <Route 
-          path="/" 
-          component={Smurfs} />
-          <Route
-            path="/smurf-form"
-            component={SmurfForm}
-          />
-        </div>
-      </Router>
+          <Route path="/" component={Smurfs} />
+
+
+        </Router>
       </Container>
     );
   }
 }
 
 export default App;
-
-

@@ -1,26 +1,16 @@
 import React from 'react';
-
+import { Card } from 'semantic-ui-react';
 
 const Smurf = props => {
   return (
-    <div className="Friend">
-
-      <header>
-        <h1>{props.smurf.name}</h1>
-      </header>
-
-      <div className="age">
-        <h4>Age:</h4>
-        <p>{props.smurf.age}</p>
-      </div>
-
-      <div className="email">
-        <h4>email:</h4>
-        <p>{props.smurf.height}</p>
-      </div>
-
-    </div>
-  )
-}
+    <Card>
+    <Card.Content>
+      <Card.Header>{props.smurf.name}</Card.Header>
+      <Card.Meta>{props.smurf.height} tall</Card.Meta>
+      <Card.Description>{props.smurf.age} smurf years old</Card.Description>
+      </Card.Content>
+    </Card>
+  );
+};
 
 export default Smurf;
