@@ -14,11 +14,9 @@ import {
 } from "semantic-ui-react";
 
 class Smurfs extends React.Component {
- 
     componentDidMount() {
         this.props.getSmurfs();
     }
-
 
     render() {
         return (
@@ -26,17 +24,17 @@ class Smurfs extends React.Component {
                 <Header
                     as="h1"
                     style={{
-                        fontSide: "16px"
+                        fontSize: "26px",
+                        fontFamily: "Roboto"
                     }}
                 >
                     Smurf Village
                 </Header>
-
                 <Card.Group>
                     {this.props.smurfs.map(smurf => (
                         <Smurf key={smurf.id} smurf={smurf} />
                     ))}
-                </Card.Group> 
+                </Card.Group>
             </Container>
         );
     }

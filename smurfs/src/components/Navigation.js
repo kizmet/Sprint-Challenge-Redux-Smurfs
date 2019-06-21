@@ -12,7 +12,7 @@ class Navigation extends React.Component {
         <Menu color="blue" inverted widths={2}
               style={{
                 fontFamily:'Permanent Marker',
-                fontSize: '16px',
+                fontSize: '26px',
                 margin:0
               }}
               >
